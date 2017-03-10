@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>responsive</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <style>
+    body > * { background: lightblue; }
+    body {
+      display: grid;
+      grid-template-areas:
+        "header"
+        "main"
+        "aside"
+        "footer"
+      ;
+      grid-gap: 10px;
+    }
+    header { grid-area: header; }
+    main { grid-area: main; }
+    aside { grid-area: aside; }
+    footer { grid-area: footer; }
+    @media (min-width: 600px) {
+      body {
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas:
+          "header header"
+          "main aside"
+          "footer footer"
+        ;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>header</header>
+  <main>main</main>
+  <aside>aside</aside>
+  <footer>footer</footer>
+</body>
+</html>
